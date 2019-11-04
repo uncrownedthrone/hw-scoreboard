@@ -12,8 +12,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: whitesmoke;
-  color: rgb(14, 14, 14);
+  background-color: #354747;
+  color: lightgray;
 }
 
 body,
@@ -48,4 +48,42 @@ h1 {
 .team-2-score {
   text-align: center;
   font-size: 5rem;
+}
+
+.team-1-add-1-button,
+.team-2-add-1-button {
+  font-size: 1rem;
+  color: white;
+  background-color: darkgreen;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0.25rem;
+  margin: 0.5rem;
+}
+
+.team-1-subtract-1-button,
+.team-2-subtract-1-button {
+  font-size: 1rem;
+  color: white;
+  background-color: darkred;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0.25rem;
+  margin: 0.5rem;
+}
+
+.update-team-2-name,
+.update-team-1-name {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0.25rem;
+  margin: 0.5rem;
+  background-color: lightgray;
+}
+
+.team-1-input,
+.team-2-input {
+  background-color: #c6f7ed;
+  border-radius: 8px;
 }
