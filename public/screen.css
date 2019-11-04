@@ -14,6 +14,7 @@ body {
   align-items: center;
   background-color: #354747;
   color: lightgray;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body,
@@ -32,15 +33,25 @@ h1 {
   height: 75%;
 }
 
-.team {
+.team-one,
+.team-two {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
-.team h2 {
+.team-one {
+  border: 10px outset lightgray;
+}
+
+.team-two {
+  border: 10px inset lightgray;
+}
+
+.team-one h2,
+.team-two h2 {
   font-size: 2rem;
 }
 
@@ -86,4 +97,16 @@ h1 {
 .team-2-input {
   background-color: #c6f7ed;
   border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.5rem;
+  }
 }

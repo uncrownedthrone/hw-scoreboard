@@ -3,10 +3,10 @@ const qs = (element) => document.querySelector(element)
 let teamOneScore = 0
 let teamTwoScore = 0
 
-const teamOneScoreText = document.querySelector('.team-1-score')
+const teamOneScoreText = qs('.team-1-score')
 teamOneScoreText.textContent = teamOneScore
 
-const teamTwoScoreText = document.querySelector('.team-2-score')
+const teamTwoScoreText = qs('.team-2-score')
 teamTwoScoreText.textContent = teamTwoScore
 
 // creating a function to add 1 and return a new score
@@ -33,20 +33,19 @@ const teamTwoSubtractOne = () => {
 
 // name of team 1 will update when update button is pressed
 const updateTeamOneName = () => {
-  const teamOneName = document.querySelector('input.team-1-input').value
-  document.querySelector('.team-1-name').textContent = teamOneName
-  document.querySelector('input.team-1-input').value = ''
+  const teamOneName = qs('input.team-1-input').value
+  qs('.team-1-name').textContent = teamOneName
+  qs('input.team-1-input').value = ''
 }
 
 // name of team 2 will update when update button is pressed
 const updateTeamTwoName = () => {
-  const teamTwoName = document.querySelector('input.team-2-input').value
-  document.querySelector('.team-2-name').textContent = teamTwoName
-  document.querySelector('input.team-2-input').value = ''
+  const teamTwoName = qs('input.team-2-input').value
+  qs('.team-2-name').textContent = teamTwoName
+  qs('input.team-2-input').value = ''
 }
 
 const main = () => {
-  console.log(qs('.team-2-input'))
   qs('button.team-1-add-1-button').addEventListener('click', teamOneAddOne)
   qs('button.team-1-subtract-1-button').addEventListener(
     'click',
@@ -59,6 +58,31 @@ const main = () => {
   )
   qs('button.update-team-1-name').addEventListener('click', updateTeamOneName)
   qs('button.update-team-2-name').addEventListener('click', updateTeamTwoName)
+}
+
+const startTimer = (duration, display) => {
+  let timer = duration,
+    minutes,
+    seconds
+  setInterval(function() {
+    minutes = parseInt(timer / 60, 10)
+    seconds = parseInt(timer % 60, 10)
+
+    minutes = minutes < 10 ? '0' + minutes : minutes
+    seconds = seconds < 10 ? '0' + seconds : seconds
+
+    display.textContent = minutes + ':' + seconds
+
+    if (--timer < 0) {
+      timer = duration
+    }
+  }, 1000)
+}
+
+window.onload = function() {
+  const fiveMinutes = 60 * 5,
+    display = qs('.time')
+  startTimer(fiveMinutes, display)
 }
 
 document.addEventListener('DOMContentLoaded', main)
