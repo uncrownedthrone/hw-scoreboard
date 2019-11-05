@@ -43,11 +43,11 @@ h1 {
 }
 
 .team-one {
-  border: 10px outset lightgray;
+  border: 5px inset lightgray;
 }
 
 .team-two {
-  border: 10px inset lightgray;
+  border: 5px inset lightgray;
 }
 
 .team-one h2,
