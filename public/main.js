@@ -100,5 +100,4 @@ qs('button.update-team-1-name').addEventListener('click', updateTeamOneName)
 qs('button.update-team-2-name').addEventListener('click', updateTeamTwoName)
 resetGame()
 qs('button.reset-button').addEventListener('click', resetGame)
-
 document.addEventListener('DOMContentLoaded', main)
