@@ -17,6 +17,8 @@ const teamOneAddOne = () => {
     qs('.team-1-score').textContent = 'Winner!'
     qs('button.team-1-add-1-button').disabled = true
     qs('button.team-1-subtract-1-button').disabled = true
+    qs('button.team-2-add-1-button').disabled = true
+    qs('button.team-2-subtract-1-button').disabled = true
   }
   if (teamOneScore === 21) {
     qs('.team-1-score').textContent = 'You win!'
@@ -29,6 +31,8 @@ const teamTwoAddOne = () => {
   teamTwoScoreText.textContent = teamTwoScore
   if (teamTwoScore === 21) {
     qs('.team-2-score').textContent = 'Winner!'
+    qs('button.team-1-add-1-button').disabled = true
+    qs('button.team-1-subtract-1-button').disabled = true
     qs('button.team-2-add-1-button').disabled = true
     qs('button.team-2-subtract-1-button').disabled = true
   }
